@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jszip.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <style>
+      html { border:0; margin:0; padding:0; } 
+      body { border:0; margin:0; padding:0; }
+      .zip { box-sizing: border-box; position:relative; float:left; width:1000px; height:auto; border:1px solid #ccc; margin:20px; padding:20px; font-family:Verdana, Geneva, Tahoma, sans-serif; }
+      .zip span { font-weight:bold; }
+      .zip .title { position:relative; float:left; width:100%; height:auto; font-size:22px; color:#000; margin-bottom:20px; }
+      .zip .desc { position:relative; float:left; width:100%; height:auto; font-size:14px; color:#666; margin-bottom:20px; }
+      .zip .input { position:relative; float:left; width:900px; height:60px; font-size:14px; color:#666; border:1px solid #ccc; padding:0px; margin:10px 0 20px 20px; }
+      .zip .input label { position:relative; float:left; width:100%; height:60px; line-height:60px; border:0; margin:0; padding:0; text-indent:20px; }
+      .zip .input input { background:#ccc; width:400px; margin-left:10px; }
+      .zip .output { position:relative; float:left; width:860px; height:auto; font-size:14px; color:#666; border:1px solid #ccc; padding:20px; margin:0px 0 20px 20px; }
+      .zip .hint { position:relative; float:left; text-align:center; font-size:12px; color:#666; line-height:130px; width:162px; height:130px; background:#f1f1f1; padding:0 10px 0 10px; }
+      .zip .file_contents { position:relative; float:left; font-size:12px; color:#666; line-height:20px; width:650px; height:130px; background:#f1f1f1; padding:0; border:1px solid #000; overflow:hidden; overflow-y:auto; overflow-x:hidden; }
+      .table { position:relative; float:left; width:100%; border:0; }
+      .table .header { box-sizing: border-box; position:relative; float:left; width:100%; padding:4px; background:#999; color:#fff;  }
+      .table .header .c1 { position:relative; float:left; width:45%; }
+      .table .header .c2 { position:relative; float:left; width:20%; }
+      .table .header .c3 { position:relative; float:left; width:35%; }
+      .table .body { position:relative; float:left; width:100%; }
+      .table .body .tr { box-sizing: border-box; position:relative; float:left; width:100%; height:auto; padding:0; background:#ccc; color:#fff;  }
+      .table .body .tr .c1 {  box-sizing: border-box; position:relative; float:left; width:45%; padding:4px; }
+      .table .body .tr .c2 {  box-sizing: border-box; position:relative; float:left; width:20%; padding:4px; }
+      .table .body .tr .c3 {  box-sizing: border-box; position:relative; float:left; width:35%; padding:4px; }
+      .table .body .tr:hover div { font-size:12px; cursor:pointer; background:#66cc66; }
+      .table .body .tr_expand { display:none; box-sizing: border-box; position:relative; float:left; width:100%; height:0px; padding:0; background:#ccc; color:#fff;  }
+      .table .body .tr_expand.open { display:block !important; position:relative; float:left; width:100%; height:auto; }
+      .table .body .details { position:relative; float:left; width:100%; height:auto; background:#fff; padding:4px; margin:0; border:0; color:#000; }
+    </style> 
+  </head>
+  <body>
+  <div class="zip">
+    <form>
+      <div class="title">IMPRESS<i>(NodeJS Only POC)</i></div>
+      <div class="output">
+        <label for="file_outout"><span>Output</span> : <%- output %></label>
+      </div>
+    </form>
+  </div>
+  </body>
+</html>
